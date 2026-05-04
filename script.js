@@ -138,6 +138,38 @@ const skills = [
   },
 ];
 
+const trophies = [
+  {
+    abbr: "CKAD",
+    title: "Certified Kubernetes Application Developer",
+    issuer: "Cloud Native Computing Foundation",
+    year: "2025",
+    verifyUrl: "https://training.linuxfoundation.org/certification/verify",
+    ringColor: "#326ce5",
+  },
+  {
+    abbr: "AZ-204",
+    title: "Microsoft Certified: Azure Developer Associate",
+    issuer: "Microsoft",
+    verifyUrl: "https://learn.microsoft.com/en-us/users/markanthonypajunar-1518/credentials/b5bbeb3448455eb7",
+    ringColor: "#0078d4",
+  },
+  {
+    abbr: "AZ-900",
+    title: "Microsoft Certified: Azure Fundamentals",
+    issuer: "Microsoft",
+    verifyUrl: "https://learn.microsoft.com/en-us/users/markanthonypajunar-1518/credentials/597aa1da5cbcdd10",
+    ringColor: "#0078d4",
+  },
+  {
+    abbr: "AI-900",
+    title: "Microsoft Certified: Azure AI Fundamentals",
+    issuer: "Microsoft",
+    verifyUrl: "https://learn.microsoft.com/en-us/users/markanthonypajunar-1518/credentials/990f95e400d6dec0",
+    ringColor: "#5e2ca5",
+  },
+];
+
 // ---------- RENDER ----------
 function shieldSvg(color) {
   return `
@@ -192,6 +224,29 @@ function renderSkills() {
     .join("");
 }
 
+function renderTrophies() {
+  const grid = document.getElementById("trophy-grid");
+  if (!grid) return;
+  grid.innerHTML = trophies
+    .map(
+      (t) => `
+      <article class="trophy">
+        <div class="trophy-medallion" style="--ring:${t.ringColor}">
+          <span class="trophy-abbr">${t.abbr}</span>
+        </div>
+        <h3 class="trophy-title">${t.title}</h3>
+        <p class="trophy-issuer">Bestowed by <strong>${t.issuer}</strong>${
+          t.year ? ` · ${t.year}` : ""
+        }</p>
+        <a class="trophy-verify" href="${t.verifyUrl}" target="_blank" rel="noreferrer">
+          Verify Trophy <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+    `
+    )
+    .join("");
+}
+
 // ---------- NAVIGATION ----------
 const pages = Array.from(document.querySelectorAll(".page"));
 const runes = Array.from(document.querySelectorAll(".rune"));
@@ -225,6 +280,7 @@ document.addEventListener("click", (e) => {
 // ---------- INIT ----------
 renderQuests();
 renderSkills();
+renderTrophies();
 
 const initial = (location.hash || "#home").replace("#", "");
 const validInitial = pages.some((p) => p.id === initial) ? initial : "home";

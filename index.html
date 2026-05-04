@@ -80,6 +80,23 @@
           </button>
         </li>
         <li>
+          <button class="rune" data-target="trophies" aria-label="Trophies" data-tooltip="Trophy Hall">
+            <span class="rune-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28">
+                <path d="M8 11 C4 11 4 17 8 17" stroke="#2a1810" stroke-width="1.5" fill="none" />
+                <path d="M24 11 C28 11 28 17 24 17" stroke="#2a1810" stroke-width="1.5" fill="none" />
+                <path d="M8 7 L24 7 L22 18 C22 20 19 21 16 21 C13 21 10 20 10 18 Z"
+                  fill="#d4a93a" stroke="#2a1810" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M10 9 L22 9" stroke="#f0d878" stroke-width="0.8" />
+                <circle cx="16" cy="13" r="1.8" fill="#8b2c1d" stroke="#2a1810" stroke-width="0.6" />
+                <rect x="14" y="21" width="4" height="3" fill="#5c3b1e" stroke="#2a1810" stroke-width="1.2" />
+                <rect x="9" y="24" width="14" height="3" fill="#5c3b1e" stroke="#2a1810" stroke-width="1.2" />
+              </svg>
+            </span>
+            <span class="rune-label">Trophies</span>
+          </button>
+        </li>
+        <li>
           <button class="rune" data-target="services" aria-label="Services" data-tooltip="Services">
             <span class="rune-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" width="28" height="28">
@@ -194,6 +211,21 @@
           <p class="lead">Disciplines forged across a decade of campaigns.</p>
 
           <div class="skill-grid" id="skill-grid"></div>
+        </div>
+      </section>
+
+      <!-- TROPHIES -->
+      <section id="trophies" class="page page-trophies" aria-labelledby="trophies-title" hidden>
+        <div class="parchment">
+          <div class="parchment-edges" aria-hidden="true"></div>
+          <p class="eyebrow">Trophy Hall</p>
+          <h2 id="trophies-title">Earned Marks of Mastery</h2>
+          <p class="lead">
+            Trophies bestowed by the great guilds of cloud and code — each
+            verified, each hard-won, each a marker on the campaign trail.
+          </p>
+
+          <div class="trophy-grid" id="trophy-grid"></div>
         </div>
       </section>
 
