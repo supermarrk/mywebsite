@@ -80,6 +80,27 @@
           </button>
         </li>
         <li>
+          <button class="rune" data-target="services" aria-label="Services" data-tooltip="Services">
+            <span class="rune-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28">
+                <g transform="rotate(45 16 16)">
+                  <rect x="15" y="3" width="2" height="20" fill="#cfd2d6" stroke="#2a1810" stroke-width="0.8" />
+                  <rect x="11" y="21" width="10" height="2" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
+                  <rect x="14.5" y="23" width="3" height="5" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
+                  <circle cx="16" cy="29" r="1.4" fill="#d4a93a" stroke="#2a1810" stroke-width="0.6" />
+                </g>
+                <g transform="rotate(-45 16 16)">
+                  <rect x="15" y="3" width="2" height="20" fill="#cfd2d6" stroke="#2a1810" stroke-width="0.8" />
+                  <rect x="11" y="21" width="10" height="2" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
+                  <rect x="14.5" y="23" width="3" height="5" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
+                  <circle cx="16" cy="29" r="1.4" fill="#d4a93a" stroke="#2a1810" stroke-width="0.6" />
+                </g>
+              </svg>
+            </span>
+            <span class="rune-label">Services</span>
+          </button>
+        </li>
+        <li>
           <button class="rune" data-target="about" aria-label="About" data-tooltip="About">
             <span class="rune-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" width="28" height="28">
@@ -176,6 +197,80 @@
         </div>
       </section>
 
+      <!-- SERVICES -->
+      <section id="services" class="page page-services" aria-labelledby="services-title" hidden>
+        <div class="parchment">
+          <div class="parchment-edges" aria-hidden="true"></div>
+          <p class="eyebrow">Contract Board</p>
+          <h2 id="services-title">Services of the Architect</h2>
+          <p class="lead">
+            Contracts the Architect accepts from kingdoms, guilds, and lone
+            adventurers. Each offering is delivered with the rigor of a decade-long
+            campaign — and the clarity of a craftsman's hand.
+          </p>
+
+          <div class="contract-grid">
+            <article class="contract">
+              <div class="contract-medallion" aria-hidden="true">🧭</div>
+              <p class="contract-tag">Contract I</p>
+              <h3>Digital Transformation Strategy</h3>
+              <p class="contract-blurb">
+                Guiding kingdoms through modernization and strategic evolution —
+                from legacy estates to cloud-native realms, with clear roadmaps
+                and measurable milestones.
+              </p>
+              <ul class="contract-meta">
+                <li>Cloud &amp; platform strategy</li>
+                <li>Modernization roadmaps</li>
+                <li>Architecture governance</li>
+              </ul>
+            </article>
+
+            <article class="contract">
+              <div class="contract-medallion" aria-hidden="true">🏗</div>
+              <p class="contract-tag">Contract II</p>
+              <h3>Solutions Architecture</h3>
+              <p class="contract-blurb">
+                Designing resilient systems and scalable structures for complex
+                domains — banking, fintech, healthcare, and beyond — engineered
+                to ship and built to last.
+              </p>
+              <ul class="contract-meta">
+                <li>System &amp; integration design</li>
+                <li>Microservices &amp; APIs</li>
+                <li>Azure · AKS · APIM</li>
+              </ul>
+            </article>
+
+            <article class="contract">
+              <div class="contract-medallion" aria-hidden="true">📘</div>
+              <p class="contract-tag">Contract III</p>
+              <h3>Java Mentoring</h3>
+              <p class="contract-blurb">
+                Training aspiring developers in the arcane arts of Java and
+                backend mastery — from first incantation to enterprise-grade
+                spellcraft.
+              </p>
+              <ul class="contract-meta">
+                <li>1:1 mentoring &amp; pairing</li>
+                <li>Spring Boot &amp; microservices</li>
+                <li>Code review &amp; standards</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="contract-cta">
+            <p>
+              Should your kingdom require a service not listed above, you may
+              <em>send a raven</em>, and we shall discuss your needs.
+            </p>
+            <button class="btn-medieval" data-target="contact">
+              <span>✉</span> Send a Raven
+            </button>
+          </div>
+        </div>
+      </section>
+
       <!-- ABOUT -->
       <section id="about" class="page page-about" aria-labelledby="about-title" hidden>
         <div class="parchment">
@@ -200,6 +295,11 @@
                 clarity.
               </p>
               <p>
+                I'm also deeply versed in wielding modern AI as a craftsman's tool
+                — pairing with it to design, prototype, and ship faster without
+                losing rigor. This very portfolio was forged with AI as my apprentice.
+              </p>
+              <p>
                 Beyond the keyboard, I'm a co-founder, mentor, and a lifelong fan of
                 worlds where every person has a quest worth pursuing.
               </p>
@@ -212,7 +312,7 @@
                 <dt>Alignment</dt><dd>Lawful · Pragmatic</dd>
                 <dt>Primary Weapon</dt><dd>Systems Thinking</dd>
                 <dt>Secondary</dt><dd>Mentorship</dd>
-                <dt>Languages</dt><dd>Java, TypeScript, Go, Python</dd>
+                <dt>Languages</dt><dd>Java, TypeScript, Python</dd>
                 <dt>Realms</dt><dd>Azure · Kubernetes · APIM</dd>
                 <dt>Legendary Trait</dt>
                 <dd>Translating enterprise complexity into shippable execution.</dd>
@@ -237,7 +337,7 @@
             <li>
               <span class="contact-icon" aria-hidden="true">✉</span>
               <span class="contact-label">Letter</span>
-              <a href="mailto:hello@pajunar.com">hello@pajunar.com</a>
+              <a href="mailto:pajunmaaa@gmail.com">pajunmaaa@gmail.com</a>
             </li>
             <li>
               <span class="contact-icon" aria-hidden="true">⚜</span>
@@ -249,7 +349,7 @@
             <li>
               <span class="contact-icon" aria-hidden="true">⚒</span>
               <span class="contact-label">Forge</span>
-              <a href="https://github.com/" target="_blank" rel="noreferrer">github.com</a>
+              <a href="https://github.com/supermarrk" target="_blank" rel="noreferrer">github.com/supermarrk</a>
             </li>
           </ul>
 

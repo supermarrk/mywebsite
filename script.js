@@ -124,7 +124,12 @@ const skills = [
   {
     title: "Languages",
     shieldColor: "#a06820",
-    items: ["Java", "TypeScript", "Python", "Go"],
+    items: ["Java", "TypeScript", "Python"],
+  },
+  {
+    title: "AI Mastery",
+    shieldColor: "#1f4e7a",
+    items: ["Prompt Engineering", "AI-Assisted Dev", "RAG", "LLM Workflows"],
   },
   {
     title: "Domains",

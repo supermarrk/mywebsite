@@ -558,6 +558,128 @@ html, body {
   border-radius: 2px;
 }
 
+/* ---------- SERVICES / CONTRACTS ---------- */
+.contract-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.contract {
+  position: relative;
+  padding: 26px 22px 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.26) 0%, rgba(184, 151, 96, 0.16) 100%);
+  border: 1px solid var(--parchment-edge);
+  border-top: 3px solid var(--gold);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-align: center;
+}
+
+.contract:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.contract-medallion {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background:
+    radial-gradient(circle at 30% 25%, var(--gold-light) 0%, var(--gold) 70%, #a07a20 100%);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow:
+    0 3px 0 var(--wood-dark),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+}
+
+.contract-tag {
+  margin: 0 0 4px;
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  font-weight: 700;
+}
+
+.contract h3 {
+  margin: 0 0 10px;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.contract-blurb {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.contract-meta {
+  margin: 12px 0 0;
+  padding: 12px 0 0;
+  list-style: none;
+  border-top: 1px dashed var(--parchment-edge);
+  display: grid;
+  gap: 4px;
+  text-align: left;
+}
+
+.contract-meta li {
+  font-size: 0.86rem;
+  padding-left: 16px;
+  position: relative;
+  color: var(--ink-soft);
+}
+
+.contract-meta li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.contract-cta {
+  margin-top: 28px;
+  padding: 20px 22px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--parchment-edge);
+  border-left: 4px solid var(--crimson);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.contract-cta p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ink);
+  flex: 1 1 320px;
+}
+
+.contract-cta em {
+  color: var(--crimson);
+  font-style: italic;
+  font-weight: 600;
+}
+
 /* ---------- ABOUT ---------- */
 .about-grid {
   display: grid;
