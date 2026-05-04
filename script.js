@@ -124,7 +124,7 @@ const skills = [
   {
     title: "Languages",
     shieldColor: "#a06820",
-    items: ["Java", "TypeScript", "Python"],
+    items: ["Java", "TypeScript", "C#"],
   },
   {
     title: "AI Mastery",
