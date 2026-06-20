@@ -1,290 +1,500 @@
-// ---------- DATA ----------
-const quests = [
+// ==============================
+// DATA
+// ==============================
+
+const experiences = [
   {
-    icon: "⚒",
-    title: "Apprentice of the Iron Foundry",
-    period: "Jul 2015 — Jan 2016",
-    setting: "ON Semiconductor Philippines · The Forge of Silicon",
-    meta: [
-      ["Mission", "Master technical discipline in high-precision environments"],
-      ["Challenges", "Zero-margin errors and fragile process chains"],
-      ["Rewards", "Systems mindset, rigor, reliability foundations"],
-    ],
-  },
-  {
-    icon: "🛡",
-    title: "Guardian of the Medical Citadel",
-    period: "Feb 2016 — Dec 2018",
-    setting: "Software Laboratories Inc. at St. Luke's Medical Center",
-    meta: [
-      ["Mission", "Build and maintain mission-critical healthcare applications"],
-      ["Challenges", "Legacy slowdowns, functionality risk, operational continuity"],
-      ["Rewards", "JavaScript, Thymeleaf, optimization, stakeholder communication"],
-    ],
-  },
-  {
-    icon: "📜",
-    title: "Cartographer of Risk Gateways",
-    period: "Dec 2018 — Aug 2019",
-    setting: "Yondu, Inc. · Insurance kingdoms frontier",
-    meta: [
-      ["Mission", "Build underwriting applications, insurance APIs, batch engines"],
-      ["Challenges", "Strict client specs, performance bottlenecks, evolving requirements"],
-      ["Rewards", "Microservices, Spring Boot, API craftsmanship, batch processing"],
-    ],
-  },
-  {
-    icon: "🗺",
-    title: "Squad Captain of Integrated Realms",
-    period: "Aug 2019 — Oct 2021",
-    setting: "Accenture · Philippines, Japan, Singapore campaigns",
-    meta: [
-      ["Mission", "Lead developers, build microservices, connect payment gateways"],
-      ["Challenges", "Multi-region delivery and complex client integration paths"],
-      ["Rewards", "Team leadership, sequence design, enterprise integration strategy"],
-    ],
-  },
-  {
-    icon: "☁",
-    title: "Warden of the Cloud Kingdom",
-    period: "Oct 2021 — Apr 2024",
-    setting: "Manulife IT Delivery Center Asia · Makati",
-    meta: [
-      ["Mission", "Migrate PCF services to Azure Kubernetes; APIs to Azure API Management"],
-      ["Challenges", "Platform migration risk, identity security, regional integration"],
-      ["Rewards", "AKS, APIM, AAD auth, Salesforce/Dynamics integration, mentorship"],
-    ],
-  },
-  {
-    icon: "🔥",
-    title: "The Reflection Chapter",
-    period: "Apr 2024 — Oct 2024",
-    setting: "Personal goal pursuit · The Silent Camp",
-    meta: [
-      ["Mission", "Recalibrate, recover, sharpen long-range focus"],
-      ["Rewards", "Strategic clarity and renewed momentum"],
-    ],
-  },
-  {
-    icon: "🏦",
-    title: "Marshal of Releases &amp; Standards",
-    period: "Nov 2024 — Aug 2025",
-    setting: "Metrobank · On-site core banking command",
-    meta: [
-      ["Mission", "Align leadership, mentor teams, govern architecture quality"],
-      ["Challenges", "Legacy replacement, defect storms, workflow inconsistency"],
-      ["Rewards", "GitFlow rollout, coding standards, release governance"],
-    ],
-  },
-  {
-    icon: "🏰",
-    title: "Co-Founder of Nexus Elixir",
-    period: "Dec 2024 — Apr 2026",
-    setting: "Nexus Elixir Solutions Corp. · Startup frontier",
-    meta: [
-      ["Mission", "Lead technology direction; architect Azure cloud infrastructure"],
-      ["Challenges", "Early-stage uncertainty, architecture tradeoffs, resource constraints"],
-      ["Rewards", "IT strategy, solutions engineering, executive technical vision"],
-    ],
-  },
-  {
-    icon: "💠",
-    title: "Architect of Digital Gold",
+    company: "GCash",
+    role: "Manager — Junior Solutions Architect",
     period: "Aug 2025 — Present",
-    setting: "GCash · High-scale financial realm",
-    meta: [
-      ["Mission", "Shape scalable solutions as Manager — Junior Solutions Architect"],
-      ["Challenges", "Rapid growth complexity and evolving architecture demands"],
-      ["Rewards", "Kubernetes at scale, RAG-powered design patterns, architecture progression"],
+    location: "Manila, PH",
+    tech: ["Kubernetes", "Spring Boot", "Azure", "RAG", "Microservices", "Java"],
+    highlights: [
+      "Shaping architecture decisions for a platform serving tens of millions of Filipinos",
+      "Driving RAG-powered and AI-enhanced system design patterns across product teams",
+      "Leading architecture governance and enforcing technical standards at scale",
+    ],
+  },
+  {
+    company: "Nexus Elixir Solutions Corp.",
+    role: "Co-Founder & CTO",
+    period: "Dec 2024 — Apr 2026",
+    location: "Manila, PH",
+    tech: ["Azure", "Spring Boot", "TypeScript", "C#", "Solutions Architecture"],
+    highlights: [
+      "Co-founded and led full technology direction for an early-stage solutions company",
+      "Architected Azure cloud infrastructure from the ground up under resource constraints",
+      "Built and mentored the founding engineering team, establishing process and culture",
+    ],
+  },
+  {
+    company: "Metrobank",
+    role: "Lead Software Engineer",
+    period: "Nov 2024 — Aug 2025",
+    location: "Manila, PH",
+    tech: ["Java", "Spring Boot", "GitFlow", "Core Banking", "REST APIs"],
+    highlights: [
+      "Rolled out GitFlow across engineering teams, eliminating branch and merge conflicts",
+      "Enforced coding standards and architecture quality review across multiple squads",
+      "Deployed new core banking APIs supporting critical financial transaction workflows",
+    ],
+  },
+  {
+    company: "Manulife IT Delivery Center Asia",
+    role: "Senior Software Engineer",
+    period: "Oct 2021 — Apr 2024",
+    location: "Makati, PH",
+    tech: ["Azure Kubernetes (AKS)", "Azure APIM", "Azure AD", "Salesforce", "Dynamics 365", "Java"],
+    highlights: [
+      "Migrated PCF-hosted services to Azure Kubernetes Service — zero downtime across regions",
+      "Moved legacy APIs to Azure API Management with Azure AD security and rate limiting",
+      "Integrated Salesforce and Dynamics 365 across HK and SEA business units",
+      "Mentored junior engineers and led bi-weekly architecture review sessions",
+    ],
+  },
+  {
+    company: "Accenture",
+    role: "Technical Lead",
+    period: "Aug 2019 — Oct 2021",
+    location: "PH · JP · SG",
+    tech: ["Java", "Spring Boot", "Microservices", "Payment Gateways", "MySQL", "REST APIs"],
+    highlights: [
+      "Led cross-functional engineering squads across Philippines, Japan, and Singapore",
+      "Designed and delivered microservice integration for enterprise payment gateway systems",
+      "Produced sequence diagrams and architecture flows for complex multi-region integrations",
+    ],
+  },
+  {
+    company: "Yondu, Inc.",
+    role: "Software Developer",
+    period: "Dec 2018 — Aug 2019",
+    location: "Manila, PH",
+    tech: ["Java", "Spring Boot", "REST APIs", "Batch Processing", "Insurance Domain"],
+    highlights: [
+      "Built underwriting applications and insurance APIs for enterprise insurance clients",
+      "Engineered batch processing engines handling large-scale financial datasets",
+      "Delivered against strict client specifications and compliance requirements",
+    ],
+  },
+  {
+    company: "Software Laboratories Inc. · St. Luke's Medical Center",
+    role: "Software Developer",
+    period: "Feb 2016 — Dec 2018",
+    location: "Manila, PH",
+    tech: ["JavaScript", "Java", "Thymeleaf", "Spring MVC", "MySQL"],
+    highlights: [
+      "Built and maintained mission-critical hospital information systems",
+      "Optimized legacy application performance, significantly reducing system load times",
+      "Collaborated directly with hospital departments to ensure 24/7 operational continuity",
+    ],
+  },
+  {
+    company: "ON Semiconductor Philippines",
+    role: "Process / Technology Engineer",
+    period: "Jul 2015 — Jan 2016",
+    location: "Manila, PH",
+    tech: ["Process Engineering", "Systems Analysis", "Data Analysis"],
+    highlights: [
+      "Applied zero-margin engineering discipline in high-precision semiconductor manufacturing",
+      "Built the foundational systems thinking and rigor carried throughout an engineering career",
     ],
   },
 ];
 
 const skills = [
   {
-    title: "Cloud & Platform",
-    shieldColor: "#2c5fa3",
-    items: ["Azure", "AKS", "APIM", "PCF"],
+    icon: "◈",
+    category: "Architecture",
+    items: ["Solutions Architecture", "System Integration", "Microservices Design", "API Strategy", "Domain-Driven Design", "RAG Patterns"],
   },
   {
-    title: "Backend Forging",
-    shieldColor: "#5e1d12",
-    items: ["Java", "Spring Boot", "Microservices", "REST APIs"],
+    icon: "⬡",
+    category: "Cloud & Platform",
+    items: ["Microsoft Azure", "Azure Kubernetes (AKS)", "Azure API Management", "Azure AD / Entra ID", "PCF", "Kubernetes"],
   },
   {
-    title: "Architecture",
-    shieldColor: "#3d6b3d",
-    items: ["Solutions Design", "System Integration", "RAG Patterns"],
+    icon: "{ }",
+    category: "Backend Engineering",
+    items: ["Java · Spring Boot", "TypeScript · Node.js", "C#", "REST API Design", "Batch Processing", "Microservices"],
   },
   {
-    title: "Leadership",
-    shieldColor: "#6b4a8c",
-    items: ["Mentorship", "Governance", "GitFlow", "Standards"],
+    icon: "⟳",
+    category: "DevOps & Delivery",
+    items: ["GitFlow", "Release Governance", "CI/CD Pipelines", "Coding Standards", "Architecture Review Boards"],
   },
   {
-    title: "Languages",
-    shieldColor: "#a06820",
-    items: ["Java", "TypeScript", "C#"],
+    icon: "◎",
+    category: "Leadership",
+    items: ["Engineering Mentorship", "Team Leadership", "Architecture Governance", "Stakeholder Management", "Technical Strategy"],
   },
   {
-    title: "AI Mastery",
-    shieldColor: "#1f4e7a",
-    items: ["Prompt Engineering", "AI-Assisted Dev", "RAG", "LLM Workflows"],
-  },
-  {
-    title: "Domains",
-    shieldColor: "#2a1810",
-    items: ["FinTech", "Banking", "Healthcare", "Insurance"],
+    icon: "✦",
+    category: "AI & Emerging Tech",
+    items: ["Prompt Engineering", "AI-Assisted Development", "RAG Architectures", "LLM Workflow Design", "AI-Augmented Engineering"],
   },
 ];
 
-const trophies = [
+const certifications = [
   {
     abbr: "CKAD",
-    title: "Certified Kubernetes Application Developer",
+    name: "Certified Kubernetes Application Developer",
     issuer: "Cloud Native Computing Foundation",
     year: "2025",
+    color: "#326ce5",
     verifyUrl: "https://training.linuxfoundation.org/certification/verify",
-    ringColor: "#326ce5",
   },
   {
     abbr: "AZ-204",
-    title: "Microsoft Certified: Azure Developer Associate",
+    name: "Azure Developer Associate",
     issuer: "Microsoft",
+    year: "",
+    color: "#0078d4",
     verifyUrl: "https://learn.microsoft.com/en-us/users/markanthonypajunar-1518/credentials/b5bbeb3448455eb7",
-    ringColor: "#0078d4",
   },
   {
     abbr: "AZ-900",
-    title: "Microsoft Certified: Azure Fundamentals",
+    name: "Azure Fundamentals",
     issuer: "Microsoft",
+    year: "",
+    color: "#0078d4",
     verifyUrl: "https://learn.microsoft.com/en-us/users/markanthonypajunar-1518/credentials/597aa1da5cbcdd10",
-    ringColor: "#0078d4",
   },
   {
     abbr: "AI-900",
-    title: "Microsoft Certified: Azure AI Fundamentals",
+    name: "Azure AI Fundamentals",
     issuer: "Microsoft",
+    year: "",
+    color: "#5c2d91",
     verifyUrl: "https://learn.microsoft.com/en-us/users/markanthonypajunar-1518/credentials/990f95e400d6dec0",
-    ringColor: "#5e2ca5",
   },
 ];
 
-// ---------- RENDER ----------
-function shieldSvg(color) {
-  return `
-    <svg class="skill-shield" viewBox="0 0 52 56" aria-hidden="true">
-      <path d="M26 3 L48 10 V28 C48 40 38 50 26 53 C14 50 4 40 4 28 V10 Z"
-        fill="${color}" stroke="#2a1810" stroke-width="2" stroke-linejoin="round" />
-      <path d="M26 3 V53 M4 18 H48" stroke="#d4a93a" stroke-width="1.5" opacity="0.7" />
-      <circle cx="26" cy="18" r="3" fill="#f0d878" />
-    </svg>
-  `;
-}
+const services = [
+  {
+    icon: "◈",
+    title: "Solutions Architecture",
+    desc: "Designing resilient, scalable systems for complex enterprise domains — from whiteboard to production-ready architecture.",
+  },
+  {
+    icon: "→",
+    title: "Digital Transformation",
+    desc: "Guiding organizations through modernization: legacy migration, cloud adoption, platform re-engineering, and strategic roadmapping.",
+  },
+  {
+    icon: "◎",
+    title: "Technical Leadership",
+    desc: "Fractional CTO and technical advisory for startups and scale-ups building their engineering foundations and culture.",
+  },
+  {
+    icon: "⬡",
+    title: "Cloud Architecture",
+    desc: "Azure-native architecture design, Kubernetes platforms, API management strategies, and cloud governance frameworks.",
+  },
+  {
+    icon: "{ }",
+    title: "Java Mentoring",
+    desc: "Hands-on mentoring for developers mastering Java, Spring Boot, microservices, and enterprise backend engineering.",
+  },
+  {
+    icon: "✦",
+    title: "System Design Reviews",
+    desc: "Independent architecture reviews that surface hidden risks, improve scalability, and align systems with business goals.",
+  },
+];
 
-function renderQuests() {
-  const list = document.getElementById("quest-timeline");
-  if (!list) return;
-  list.innerHTML = quests
-    .map(
-      (q) => `
-      <li class="quest">
-        <span class="quest-badge" aria-hidden="true">${q.icon}</span>
-        <h3 class="quest-title">${q.title}</h3>
-        <p class="quest-period">${q.period}</p>
-        <p class="quest-setting">${q.setting}</p>
-        <ul class="quest-meta">
-          ${q.meta
-            .map(
-              ([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`
-            )
-            .join("")}
-        </ul>
-      </li>
-    `
-    )
-    .join("");
+// ==============================
+// RENDER
+// ==============================
+
+function renderExperiences() {
+  const el = document.getElementById("experience-list");
+  if (!el) return;
+
+  el.innerHTML = experiences.map((exp, i) => `
+    <div class="exp-card" data-index="${i}">
+      <div class="exp-header" role="button" tabindex="0" aria-expanded="false">
+        <span class="exp-number">${String(i + 1).padStart(2, "0")}</span>
+        <span class="exp-company">${exp.company}</span>
+        <div class="exp-meta">
+          <span class="exp-role">${exp.role}</span>
+          <span class="exp-period">${exp.period} &nbsp;·&nbsp; ${exp.location}</span>
+        </div>
+        <span class="exp-arrow">↓</span>
+      </div>
+      <div class="exp-body">
+        <div class="exp-body-inner">
+          <div>
+            <p class="exp-body-label">Key Impact</p>
+            <div class="exp-highlights">
+              ${exp.highlights.map(h => `<p class="exp-highlight">${h}</p>`).join("")}
+            </div>
+          </div>
+          <div>
+            <p class="exp-body-label">Technologies</p>
+            <div class="exp-tech-list">
+              ${exp.tech.map(t => `<span class="exp-tech-tag">${t}</span>`).join("")}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  document.querySelectorAll(".exp-header").forEach(header => {
+    const toggle = () => {
+      const card = header.closest(".exp-card");
+      const body = card.querySelector(".exp-body");
+      const isOpen = card.classList.contains("open");
+
+      document.querySelectorAll(".exp-card.open").forEach(c => {
+        c.classList.remove("open");
+        c.querySelector(".exp-body").style.maxHeight = "0";
+        c.querySelector(".exp-header").setAttribute("aria-expanded", "false");
+      });
+
+      if (!isOpen) {
+        card.classList.add("open");
+        body.style.maxHeight = body.scrollHeight + "px";
+        header.setAttribute("aria-expanded", "true");
+      }
+    };
+
+    header.addEventListener("click", toggle);
+    header.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+    });
+  });
 }
 
 function renderSkills() {
-  const grid = document.getElementById("skill-grid");
-  if (!grid) return;
-  grid.innerHTML = skills
-    .map(
-      (s) => `
-      <div class="skill-card">
-        ${shieldSvg(s.shieldColor)}
-        <h3>${s.title}</h3>
-        <ul class="skill-list">
-          ${s.items.map((i) => `<li>${i}</li>`).join("")}
-        </ul>
+  const el = document.getElementById("skills-grid");
+  if (!el) return;
+  el.innerHTML = skills.map(s => `
+    <div class="skill-card reveal-up">
+      <span class="skill-icon">${s.icon}</span>
+      <h3 class="skill-category">${s.category}</h3>
+      <div class="skill-items">
+        ${s.items.map(item => `<span class="skill-item">${item}</span>`).join("")}
       </div>
-    `
-    )
-    .join("");
+    </div>
+  `).join("");
 }
 
-function renderTrophies() {
-  const grid = document.getElementById("trophy-grid");
-  if (!grid) return;
-  grid.innerHTML = trophies
-    .map(
-      (t) => `
-      <article class="trophy">
-        <div class="trophy-medallion" style="--ring:${t.ringColor}">
-          <span class="trophy-abbr">${t.abbr}</span>
-        </div>
-        <h3 class="trophy-title">${t.title}</h3>
-        <p class="trophy-issuer">Bestowed by <strong>${t.issuer}</strong>${
-          t.year ? ` · ${t.year}` : ""
-        }</p>
-        <a class="trophy-verify" href="${t.verifyUrl}" target="_blank" rel="noreferrer">
-          Verify Trophy <span aria-hidden="true">↗</span>
-        </a>
-      </article>
-    `
-    )
-    .join("");
+function renderCertifications() {
+  const el = document.getElementById("certs-grid");
+  if (!el) return;
+  el.innerHTML = certifications.map(c => `
+    <a class="cert-card reveal-up" href="${c.verifyUrl}" target="_blank" rel="noreferrer">
+      <div class="cert-badge" style="background:${c.color}1a; color:${c.color}; border:1px solid ${c.color}40;">
+        ${c.abbr}
+      </div>
+      <h3 class="cert-name">${c.name}</h3>
+      <p class="cert-issuer">${c.issuer}${c.year ? " · " + c.year : ""}</p>
+      <span class="cert-verify">Verify Credential →</span>
+    </a>
+  `).join("");
 }
 
-// ---------- NAVIGATION ----------
-const pages = Array.from(document.querySelectorAll(".page"));
-const runes = Array.from(document.querySelectorAll(".rune"));
+function renderServices() {
+  const el = document.getElementById("services-grid");
+  if (!el) return;
+  el.innerHTML = services.map(s => `
+    <div class="service-card reveal-up">
+      <span class="service-icon">${s.icon}</span>
+      <h3 class="service-title">${s.title}</h3>
+      <p class="service-desc">${s.desc}</p>
+    </div>
+  `).join("");
+}
 
-function showPage(target) {
-  pages.forEach((p) => {
-    if (p.id === target) {
-      p.hidden = false;
+// ==============================
+// HERO CANVAS — PARTICLE FIELD
+// ==============================
+
+function initCanvas() {
+  const canvas = document.getElementById("hero-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let W, H, pts;
+
+  const resize = () => {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+    pts = Array.from({ length: 90 }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.1 + 0.2,
+      vx: (Math.random() - 0.5) * 0.12,
+      vy: (Math.random() - 0.5) * 0.12,
+      a: Math.random() * 0.45 + 0.08,
+    }));
+  };
+
+  const draw = () => {
+    ctx.clearRect(0, 0, W, H);
+
+    // Subtle blue glow at top-left (like a distant light source)
+    const g = ctx.createRadialGradient(W * 0.15, H * 0.2, 0, W * 0.15, H * 0.2, W * 0.65);
+    g.addColorStop(0, "rgba(0,80,220,0.055)");
+    g.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+
+    pts.forEach(p => {
+      p.x = (p.x + p.vx + W) % W;
+      p.y = (p.y + p.vy + H) % H;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${p.a})`;
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  };
+
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+  draw();
+}
+
+// ==============================
+// NAV SCROLL + ACTIVE LINKS
+// ==============================
+
+function initNav() {
+  const nav    = document.getElementById("nav");
+  const burger = document.getElementById("nav-burger");
+  const menu   = document.getElementById("mobile-menu");
+  const links  = document.querySelectorAll(".mobile-link");
+
+  const closeMenu = () => {
+    burger.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
+    menu.classList.remove("open");
+    menu.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  burger.addEventListener("click", () => {
+    const isOpen = menu.classList.contains("open");
+    if (isOpen) {
+      closeMenu();
     } else {
-      p.hidden = true;
+      burger.classList.add("open");
+      burger.setAttribute("aria-expanded", "true");
+      menu.classList.add("open");
+      menu.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
     }
   });
-  runes.forEach((r) => {
-    r.classList.toggle("active", r.dataset.target === target);
-  });
-  if (location.hash !== `#${target}`) {
-    history.replaceState(null, "", `#${target}`);
-  }
-  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  links.forEach(l => l.addEventListener("click", closeMenu));
+
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 30);
+    updateActive();
+  }, { passive: true });
 }
 
-document.addEventListener("click", (e) => {
-  const trigger = e.target.closest("[data-target]");
-  if (!trigger) return;
-  const target = trigger.dataset.target;
-  if (!target) return;
-  e.preventDefault();
-  showPage(target);
+function updateActive() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  let current = "";
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 200) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle("active", a.getAttribute("href") === `#${current}`);
+  });
+}
+
+// ==============================
+// SCROLL PROGRESS BAR
+// ==============================
+
+function initScrollProgress() {
+  const bar = document.getElementById("scroll-progress");
+  if (!bar) return;
+  window.addEventListener("scroll", () => {
+    const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+    bar.style.width = `${Math.min(pct * 100, 100)}%`;
+  }, { passive: true });
+}
+
+// ==============================
+// SCROLL REVEAL
+// ==============================
+
+function initReveal() {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("revealed");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -50px 0px" });
+
+  const observe = () =>
+    document.querySelectorAll(".reveal-up, .reveal-left").forEach(el => io.observe(el));
+
+  // Hero elements reveal immediately (they're in-viewport on load)
+  document.querySelectorAll(".hero .reveal-up").forEach(el => {
+    requestAnimationFrame(() => el.classList.add("revealed"));
+  });
+
+  observe();
+  // Re-observe after dynamic content renders
+  setTimeout(observe, 200);
+}
+
+// ==============================
+// HERO PARALLAX
+// ==============================
+
+function initParallax() {
+  const content = document.querySelector(".hero-content");
+  if (!content) return;
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight) {
+      content.style.transform = `translateY(${y * 0.22}px)`;
+      content.style.opacity   = `${1 - y / (window.innerHeight * 0.75)}`;
+    }
+  }, { passive: true });
+}
+
+// ==============================
+// SMOOTH SCROLL
+// ==============================
+
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", e => {
+      const target = document.querySelector(a.getAttribute("href"));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
+// ==============================
+// BOOT
+// ==============================
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  renderExperiences();
+  renderSkills();
+  renderCertifications();
+  renderServices();
+
+  initCanvas();
+  initNav();
+  initScrollProgress();
+  initReveal();
+  initParallax();
+  initSmoothScroll();
 });
-
-// ---------- INIT ----------
-renderQuests();
-renderSkills();
-renderTrophies();
-
-const initial = (location.hash || "#home").replace("#", "");
-const validInitial = pages.some((p) => p.id === initial) ? initial : "home";
-showPage(validInitial);
-
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();

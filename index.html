@@ -3,397 +3,226 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anthony Pajunar — Architect of the Azure Realms</title>
-    <meta
-      name="description"
-      content="Medieval-RPG inspired portfolio of Anthony Pajunar — software architect, cloud strategist, and engineering leader."
-    />
+    <title>Mark Anthony Pajunar — Solutions Architect</title>
+    <meta name="description" content="Mark Anthony Pajunar — Solutions Architect, Software Engineer, and Technology Leader with 10+ years building enterprise systems across fintech, banking, healthcare, and cloud." />
+    <meta property="og:title" content="Mark Anthony Pajunar — Solutions Architect" />
+    <meta property="og:description" content="10+ years engineering scalable systems across fintech, banking, healthcare, and cloud." />
+    <meta property="og:url" content="https://pajunar.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Uncial+Antiqua&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="parchment-grain" aria-hidden="true"></div>
 
-    <header class="banner" role="banner">
-      <div class="banner-inner">
-        <div class="crest" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="44" height="44">
-            <path d="M32 2 L60 12 V30 C60 46 48 58 32 62 C16 58 4 46 4 30 V12 Z"
-              fill="#3a2616" stroke="#d4a93a" stroke-width="2.5" />
-            <path d="M32 8 L54 16 V30 C54 42 44 52 32 56 C20 52 10 42 10 30 V16 Z"
-              fill="#5c3b1e" stroke="#d4a93a" stroke-width="1" />
-            <path d="M32 18 L40 28 L32 46 L24 28 Z" fill="#d4a93a" />
-            <circle cx="32" cy="24" r="3" fill="#f0d878" />
-          </svg>
-        </div>
-        <div class="banner-text">
-          <h1>Anthony Pajunar</h1>
-          <p class="subtitle">Architect of the Azure Realms · Solutions Architect &amp; Engineering Leader</p>
-        </div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#home" class="nav-logo">MAP</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-nav">Get in Touch</a>
+        <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </header>
-
-    <nav class="rune-nav" aria-label="Primary navigation">
-      <ul>
-        <li>
-          <button class="rune" data-target="home" aria-label="Home" data-tooltip="Home">
-            <span class="rune-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <path d="M4 16 L16 5 L28 16 V27 H20 V19 H12 V27 H4 Z"
-                  fill="#5c3b1e" stroke="#2a1810" stroke-width="1.5" stroke-linejoin="round" />
-                <path d="M16 5 L28 16" stroke="#d4a93a" stroke-width="1" fill="none" />
-                <path d="M14 9 L18 9 L18 6 L14 6 Z" fill="#2a1810" />
-              </svg>
-            </span>
-            <span class="rune-label">Home</span>
-          </button>
-        </li>
-        <li>
-          <button class="rune" data-target="quests" aria-label="Quests" data-tooltip="Quests">
-            <span class="rune-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <rect x="6" y="7" width="20" height="18" rx="1" fill="#e8d4a8" stroke="#2a1810" stroke-width="1.5" />
-                <path d="M9 12 H23 M9 16 H23 M9 20 H19" stroke="#5c3b1e" stroke-width="1" />
-                <ellipse cx="6" cy="16" rx="2.5" ry="9" fill="#8b5a2b" stroke="#2a1810" stroke-width="1.2" />
-                <ellipse cx="26" cy="16" rx="2.5" ry="9" fill="#8b5a2b" stroke="#2a1810" stroke-width="1.2" />
-              </svg>
-            </span>
-            <span class="rune-label">Quests</span>
-          </button>
-        </li>
-        <li>
-          <button class="rune" data-target="skills" aria-label="Skills" data-tooltip="Skills">
-            <span class="rune-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <path d="M16 3 L27 7 V16 C27 22 22 27 16 29 C10 27 5 22 5 16 V7 Z"
-                  fill="#8b2c1d" stroke="#2a1810" stroke-width="1.5" stroke-linejoin="round" />
-                <path d="M16 3 V29 M5 12 H27" stroke="#d4a93a" stroke-width="1.2" />
-                <circle cx="16" cy="12" r="2" fill="#f0d878" />
-              </svg>
-            </span>
-            <span class="rune-label">Skills</span>
-          </button>
-        </li>
-        <li>
-          <button class="rune" data-target="trophies" aria-label="Trophies" data-tooltip="Trophy Hall">
-            <span class="rune-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <path d="M8 11 C4 11 4 17 8 17" stroke="#2a1810" stroke-width="1.5" fill="none" />
-                <path d="M24 11 C28 11 28 17 24 17" stroke="#2a1810" stroke-width="1.5" fill="none" />
-                <path d="M8 7 L24 7 L22 18 C22 20 19 21 16 21 C13 21 10 20 10 18 Z"
-                  fill="#d4a93a" stroke="#2a1810" stroke-width="1.5" stroke-linejoin="round" />
-                <path d="M10 9 L22 9" stroke="#f0d878" stroke-width="0.8" />
-                <circle cx="16" cy="13" r="1.8" fill="#8b2c1d" stroke="#2a1810" stroke-width="0.6" />
-                <rect x="14" y="21" width="4" height="3" fill="#5c3b1e" stroke="#2a1810" stroke-width="1.2" />
-                <rect x="9" y="24" width="14" height="3" fill="#5c3b1e" stroke="#2a1810" stroke-width="1.2" />
-              </svg>
-            </span>
-            <span class="rune-label">Trophies</span>
-          </button>
-        </li>
-        <li>
-          <button class="rune" data-target="services" aria-label="Services" data-tooltip="Services">
-            <span class="rune-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <g transform="rotate(45 16 16)">
-                  <rect x="15" y="3" width="2" height="20" fill="#cfd2d6" stroke="#2a1810" stroke-width="0.8" />
-                  <rect x="11" y="21" width="10" height="2" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
-                  <rect x="14.5" y="23" width="3" height="5" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
-                  <circle cx="16" cy="29" r="1.4" fill="#d4a93a" stroke="#2a1810" stroke-width="0.6" />
-                </g>
-                <g transform="rotate(-45 16 16)">
-                  <rect x="15" y="3" width="2" height="20" fill="#cfd2d6" stroke="#2a1810" stroke-width="0.8" />
-                  <rect x="11" y="21" width="10" height="2" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
-                  <rect x="14.5" y="23" width="3" height="5" fill="#5c3b1e" stroke="#2a1810" stroke-width="0.8" />
-                  <circle cx="16" cy="29" r="1.4" fill="#d4a93a" stroke="#2a1810" stroke-width="0.6" />
-                </g>
-              </svg>
-            </span>
-            <span class="rune-label">Services</span>
-          </button>
-        </li>
-        <li>
-          <button class="rune" data-target="about" aria-label="About" data-tooltip="About">
-            <span class="rune-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <rect x="4" y="14" width="24" height="14" fill="#7b7770" stroke="#2a1810" stroke-width="1.5" />
-                <rect x="4" y="10" width="5" height="5" fill="#6d6960" stroke="#2a1810" stroke-width="1.2" />
-                <rect x="13.5" y="6" width="5" height="9" fill="#6d6960" stroke="#2a1810" stroke-width="1.2" />
-                <rect x="23" y="10" width="5" height="5" fill="#6d6960" stroke="#2a1810" stroke-width="1.2" />
-                <rect x="14" y="20" width="4" height="8" fill="#2a1810" />
-                <path d="M16 8 L16 4 L18 4" stroke="#d4a93a" stroke-width="1.2" fill="none" />
-              </svg>
-            </span>
-            <span class="rune-label">About</span>
-          </button>
-        </li>
-        <li>
-          <button class="rune" data-target="contact" aria-label="Contact" data-tooltip="Contact">
-            <span class="rune-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="28" height="28">
-                <rect x="4" y="8" width="24" height="17" fill="#e8d4a8" stroke="#2a1810" stroke-width="1.5" />
-                <path d="M4 8 L16 18 L28 8" stroke="#2a1810" stroke-width="1.2" fill="none" />
-                <circle cx="16" cy="22" r="3.5" fill="#8b2c1d" stroke="#2a1810" stroke-width="1" />
-                <path d="M14 21 L18 23 M14 23 L18 21" stroke="#f0d878" stroke-width="0.8" />
-              </svg>
-            </span>
-            <span class="rune-label">Contact</span>
-          </button>
-        </li>
-      </ul>
     </nav>
 
-    <main class="realm">
-      <!-- HOME -->
-      <section id="home" class="page page-home" aria-labelledby="home-title">
-        <div class="parchment hero">
-          <div class="parchment-edges" aria-hidden="true"></div>
-          <p class="eyebrow">Welcome, traveller</p>
-          <h2 id="home-title">The Chronicle of Anthony Pajunar</h2>
-          <p class="lead">
-            A decade-long campaign through software engineering, cloud architecture,
-            and technical leadership across healthcare, insurance, banking, and fintech realms.
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <main>
+
+      <!-- HERO -->
+      <section id="home" class="hero" aria-label="Introduction">
+        <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal-up">Solutions Architect &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; Technology Leader</p>
+          <h1 class="hero-name reveal-up delay-1">Mark Anthony<br>Pajunar</h1>
+          <p class="hero-tagline reveal-up delay-2">
+            A decade engineering scalable systems across fintech, banking, healthcare,
+            and cloud — now shaping architecture at GCash for millions of users.
           </p>
-
-          <div class="character-stats">
-            <div class="stat">
-              <span class="stat-label">Class</span>
-              <span class="stat-value">Architect-Leader</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Realm</span>
-              <span class="stat-value">Manila, Philippines</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Current Post</span>
-              <span class="stat-value">GCash · Solutions Architect</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Years on Quest</span>
-              <span class="stat-value">10+</span>
-            </div>
-          </div>
-
-          <div class="hero-actions">
-            <button class="btn-medieval" data-target="quests">
-              <span>📜</span> View the Quest Log
-            </button>
-            <button class="btn-medieval ghost" data-target="contact">
-              <span>✉</span> Send a Raven
-            </button>
+          <div class="hero-actions reveal-up delay-3">
+            <a href="#experience" class="btn btn-primary">View Experience</a>
+            <a href="https://www.linkedin.com/in/supermarrk/" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn Profile</a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
           </div>
         </div>
-      </section>
-
-      <!-- QUESTS / EXPERIENCES -->
-      <section id="quests" class="page page-quests" aria-labelledby="quests-title" hidden>
-        <div class="parchment">
-          <div class="parchment-edges" aria-hidden="true"></div>
-          <p class="eyebrow">Chronicle Scroll</p>
-          <h2 id="quests-title">The Quest Log</h2>
-          <p class="lead">A hero's journey through software engineering, cloud architecture, and leadership.</p>
-
-          <ol class="quest-timeline" id="quest-timeline"></ol>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="page page-skills" aria-labelledby="skills-title" hidden>
-        <div class="parchment">
-          <div class="parchment-edges" aria-hidden="true"></div>
-          <p class="eyebrow">Heraldry of Skills</p>
-          <h2 id="skills-title">Mastery &amp; Expertise</h2>
-          <p class="lead">Disciplines forged across a decade of campaigns.</p>
-
-          <div class="skill-grid" id="skill-grid"></div>
-        </div>
-      </section>
-
-      <!-- TROPHIES -->
-      <section id="trophies" class="page page-trophies" aria-labelledby="trophies-title" hidden>
-        <div class="parchment">
-          <div class="parchment-edges" aria-hidden="true"></div>
-          <p class="eyebrow">Trophy Hall</p>
-          <h2 id="trophies-title">Earned Marks of Mastery</h2>
-          <p class="lead">
-            Trophies bestowed by the great guilds of cloud and code — each
-            verified, each hard-won, each a marker on the campaign trail.
-          </p>
-
-          <div class="trophy-grid" id="trophy-grid"></div>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <section id="services" class="page page-services" aria-labelledby="services-title" hidden>
-        <div class="parchment">
-          <div class="parchment-edges" aria-hidden="true"></div>
-          <p class="eyebrow">Contract Board</p>
-          <h2 id="services-title">Services of the Architect</h2>
-          <p class="lead">
-            Contracts the Architect accepts from kingdoms, guilds, and lone
-            adventurers. Each offering is delivered with the rigor of a decade-long
-            campaign — and the clarity of a craftsman's hand.
-          </p>
-
-          <div class="contract-grid">
-            <article class="contract">
-              <div class="contract-medallion" aria-hidden="true">🧭</div>
-              <p class="contract-tag">Contract I</p>
-              <h3>Digital Transformation Strategy</h3>
-              <p class="contract-blurb">
-                Guiding kingdoms through modernization and strategic evolution —
-                from legacy estates to cloud-native realms, with clear roadmaps
-                and measurable milestones.
-              </p>
-              <ul class="contract-meta">
-                <li>Cloud &amp; platform strategy</li>
-                <li>Modernization roadmaps</li>
-                <li>Architecture governance</li>
-              </ul>
-            </article>
-
-            <article class="contract">
-              <div class="contract-medallion" aria-hidden="true">🏗</div>
-              <p class="contract-tag">Contract II</p>
-              <h3>Solutions Architecture</h3>
-              <p class="contract-blurb">
-                Designing resilient systems and scalable structures for complex
-                domains — banking, fintech, healthcare, and beyond — engineered
-                to ship and built to last.
-              </p>
-              <ul class="contract-meta">
-                <li>System &amp; integration design</li>
-                <li>Microservices &amp; APIs</li>
-                <li>Azure · AKS · APIM</li>
-              </ul>
-            </article>
-
-            <article class="contract">
-              <div class="contract-medallion" aria-hidden="true">📘</div>
-              <p class="contract-tag">Contract III</p>
-              <h3>Java Mentoring</h3>
-              <p class="contract-blurb">
-                Training aspiring developers in the arcane arts of Java and
-                backend mastery — from first incantation to enterprise-grade
-                spellcraft.
-              </p>
-              <ul class="contract-meta">
-                <li>1:1 mentoring &amp; pairing</li>
-                <li>Spring Boot &amp; microservices</li>
-                <li>Code review &amp; standards</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="contract-cta">
-            <p>
-              Should your kingdom require a service not listed above, you may
-              <em>send a raven</em>, and we shall discuss your needs.
-            </p>
-            <button class="btn-medieval" data-target="contact">
-              <span>✉</span> Send a Raven
-            </button>
-          </div>
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
         </div>
       </section>
 
       <!-- ABOUT -->
-      <section id="about" class="page page-about" aria-labelledby="about-title" hidden>
-        <div class="parchment">
-          <div class="parchment-edges" aria-hidden="true"></div>
-          <p class="eyebrow">Hall of Records</p>
-          <h2 id="about-title">About the Architect</h2>
-
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container">
           <div class="about-grid">
-            <div class="about-bio">
-              <p>
-                I am a software architect and engineering leader who has spent the
-                last decade translating complex enterprise systems into scalable
-                execution. My campaigns have spanned semiconductors, healthcare,
-                insurance, multi-region enterprise integration, banking, and now
-                large-scale fintech.
-              </p>
-              <p>
-                I care most about the craft of architecture as a team sport — clear
-                standards, well-mapped sequences, and engineers who feel trusted to
-                ship. I write, mentor, and lead from the same belief: that great
-                systems are built by great teams, and great teams are built on
-                clarity.
-              </p>
-              <p>
-                I'm also deeply versed in wielding modern AI as a craftsman's tool
-                — pairing with it to design, prototype, and ship faster without
-                losing rigor. This very portfolio was forged with AI as my apprentice.
-              </p>
-              <p>
-                Beyond the keyboard, I'm a co-founder, mentor, and a lifelong fan of
-                worlds where every person has a quest worth pursuing.
-              </p>
+            <div class="about-left">
+              <div class="about-photo reveal-left">
+                <div class="photo-placeholder" aria-hidden="true">
+                  <div class="photo-initials">MAP</div>
+                </div>
+              </div>
             </div>
+            <div class="about-right">
+              <p class="section-label reveal-up">About</p>
+              <h2 class="section-title reveal-up delay-1" id="about-title">Architect.<br>Leader.<br>Builder.</h2>
+              <p class="about-bio reveal-up delay-2">
+                I design and deliver enterprise software systems that don't just work — they scale.
+                A decade of campaigns across healthcare, insurance, multi-region enterprise integration,
+                core banking, and high-scale fintech has shaped a single conviction: great systems are
+                built by great teams, and great teams are built on clarity.
+              </p>
+              <p class="about-bio reveal-up delay-2">
+                Today I serve as Manager – Junior Solutions Architect at GCash, shaping architecture
+                decisions at a scale that serves millions of Filipinos. I'm also a co-founder, an
+                active advocate for AI-augmented engineering, and a hands-on mentor.
+              </p>
 
-            <aside class="character-sheet">
-              <h3>Character Sheet</h3>
-              <dl>
-                <dt>Class</dt><dd>Architect-Leader</dd>
-                <dt>Alignment</dt><dd>Lawful · Pragmatic</dd>
-                <dt>Primary Weapon</dt><dd>Systems Thinking</dd>
-                <dt>Secondary</dt><dd>Mentorship</dd>
-                <dt>Languages</dt><dd>Java, TypeScript, C#</dd>
-                <dt>Realms</dt><dd>Azure · Kubernetes · APIM</dd>
-                <dt>Legendary Trait</dt>
-                <dd>Translating enterprise complexity into shippable execution.</dd>
-              </dl>
-            </aside>
+              <div class="about-stats reveal-up delay-3">
+                <div class="stat">
+                  <span class="stat-number">10+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">8</span>
+                  <span class="stat-label">Companies</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">4</span>
+                  <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">PH · JP · SG</span>
+                  <span class="stat-label">Regions</span>
+                </div>
+              </div>
+
+              <div class="career-timeline reveal-up delay-3">
+                <div class="career-item">
+                  <div class="career-dot active"></div>
+                  <div>
+                    <p class="career-role">Solutions Architect</p>
+                    <p class="career-period">2021 — Present</p>
+                  </div>
+                </div>
+                <div class="career-item">
+                  <div class="career-dot"></div>
+                  <div>
+                    <p class="career-role">Technical Lead</p>
+                    <p class="career-period">2019 — 2021</p>
+                  </div>
+                </div>
+                <div class="career-item">
+                  <div class="career-dot"></div>
+                  <div>
+                    <p class="career-role">Software Engineer</p>
+                    <p class="career-period">2015 — 2019</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section section-alt" aria-labelledby="exp-title">
+        <div class="container">
+          <p class="section-label reveal-up">Experience</p>
+          <h2 class="section-title reveal-up delay-1" id="exp-title">A Decade of<br>Impact</h2>
+          <div class="experience-list reveal-up delay-2" id="experience-list"></div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <div class="container">
+          <p class="section-label reveal-up">Skills</p>
+          <h2 class="section-title reveal-up delay-1" id="skills-title">Technical<br>Mastery</h2>
+          <div class="skills-grid" id="skills-grid"></div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="section section-alt" aria-labelledby="certs-title">
+        <div class="container">
+          <p class="section-label reveal-up">Certifications</p>
+          <h2 class="section-title reveal-up delay-1" id="certs-title">Verified<br>Credentials</h2>
+          <div class="certs-grid" id="certs-grid"></div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="container">
+          <p class="section-label reveal-up">Services</p>
+          <h2 class="section-title reveal-up delay-1" id="services-title">How I Can<br>Help</h2>
+          <p class="section-sub reveal-up delay-2">Available for consulting, advisory, and fractional CTO engagements.</p>
+          <div class="services-grid" id="services-grid"></div>
+          <div class="services-cta reveal-up">
+            <p>Need something not listed here?</p>
+            <h3>Let's discuss your project.</h3>
+            <a href="#contact" class="btn btn-primary">Start a Conversation</a>
           </div>
         </div>
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="page page-contact" aria-labelledby="contact-title" hidden>
-        <div class="parchment letter">
-          <div class="parchment-edges" aria-hidden="true"></div>
-          <p class="eyebrow">Tavern Board</p>
-          <h2 id="contact-title">Send a Raven</h2>
-          <p class="lead">
-            For collaboration, advisory, or a friendly council — pin a missive to
-            any of the boards below.
+      <section id="contact" class="section section-contact" aria-labelledby="contact-title">
+        <div class="container text-center">
+          <p class="section-label reveal-up">Contact</p>
+          <h2 class="contact-title reveal-up delay-1" id="contact-title">Ready to<br>Build Something?</h2>
+          <p class="contact-sub reveal-up delay-2">
+            Whether you're modernizing an enterprise system, building a cloud-native platform,
+            or looking for a technical advisor — let's talk.
           </p>
-
-          <ul class="contact-list">
-            <li>
-              <span class="contact-icon" aria-hidden="true">✉</span>
-              <span class="contact-label">Letter</span>
-              <a href="mailto:pajunmaaa@gmail.com">pajunmaaa@gmail.com</a>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">⚜</span>
-              <span class="contact-label">Guild Hall</span>
-              <a href="https://www.linkedin.com/in/supermarrk/" target="_blank" rel="noreferrer">
-                linkedin.com/in/supermarrk
-              </a>
-            </li>
-            <li>
-              <span class="contact-icon" aria-hidden="true">⚒</span>
-              <span class="contact-label">Forge</span>
-              <a href="https://github.com/supermarrk" target="_blank" rel="noreferrer">github.com/supermarrk</a>
-            </li>
-          </ul>
-
-          <div class="wax-seal" aria-hidden="true">
-            <span>AP</span>
+          <div class="contact-links reveal-up delay-2">
+            <a href="mailto:pajunmaaa@gmail.com" class="contact-link">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">pajunmaaa@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/supermarrk/" target="_blank" rel="noreferrer" class="contact-link">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">linkedin.com/in/supermarrk</span>
+            </a>
+            <a href="https://github.com/supermarrk" target="_blank" rel="noreferrer" class="contact-link">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/supermarrk</span>
+            </a>
+          </div>
+          <div class="contact-actions reveal-up delay-3">
+            <a href="mailto:pajunmaaa@gmail.com" class="btn btn-primary btn-lg">Send a Message</a>
+            <a href="https://www.linkedin.com/in/supermarrk/" target="_blank" rel="noreferrer" class="btn btn-secondary btn-lg">View LinkedIn</a>
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Anthony Pajunar · Forged in parchment, ink, and code.</p>
+      <div class="container">
+        <p class="footer-logo">MAP</p>
+        <p class="footer-copy">© <span id="year"></span> Mark Anthony Pajunar · Designed and built with precision.</p>
+        <p class="footer-note">pajunar.com</p>
+      </div>
     </footer>
 
     <script src="./script.js"></script>
